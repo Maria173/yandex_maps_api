@@ -41,7 +41,15 @@ class MapParams(object):
 
     # Обновление параметров карты по нажатой клавише.
     def update(self, event):
-        pass
+        if event.key == pygame.K_UP:
+            self.lon += LON_STEP
+            print(self.lon)
+        elif event.key == pygame.K_DOWN:
+            self.lon -= LON_STEP
+        elif event.key == pygame.K_RIGHT:
+            self.lat += LAT_STEP
+        elif event.key == pygame.K_LEFT:
+            self.lat -= LAT_STEP
 
     # Преобразование экранных координат в географические.
     def screen_to_geo(self, pos):
