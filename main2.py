@@ -20,7 +20,6 @@ def ll(x, y):
     return "{0},{1}".format(x, y)
 
 
-
 # Параметры отображения карты:
 # координаты, масштаб, найденные объекты и т.д.
 
@@ -41,15 +40,31 @@ class MapParams(object):
 
     # Обновление параметров карты по нажатой клавише.
     def update(self, event):
+
         if event.key == pygame.K_UP:
-            self.lon += LON_STEP
-            print(self.lon)
-        elif event.key == pygame.K_DOWN:
-            self.lon -= LON_STEP
-        elif event.key == pygame.K_RIGHT:
-            self.lat += LAT_STEP
-        elif event.key == pygame.K_LEFT:
-            self.lat -= LAT_STEP
+            self.lat += LON_STEP * 2 **(15 - self.zoom)
+        if event.key == pygame.K_DOWN:
+            self.lat -= LON_STEP * 2 **(15 - self.zoom)
+        if event.key == pygame.K_RIGHT:
+            self.lon += LAT_STEP * 2 **(15 - self.zoom)
+        if event.key == pygame.K_LEFT:
+            self.lon -= LAT_STEP * 2 **(15 - self.zoom)
+
+        if event.key == pygame.K_PAGEUP and self.zoom < 19:
+            self.zoom += 1
+
+        if event.key == pygame.K_PAGEDOWN and self.zoom > 0:
+            self.zoom -= 1
+
+        if event.key == pygame.K_1:
+            self.type = 'map'
+
+        if event.key == pygame.K_2:
+            self.type = 'sat'
+
+        if event.key == pygame.K_3:
+            self.type = 'sat,skl'
+
 
     # Преобразование экранных координат в географические.
     def screen_to_geo(self, pos):
