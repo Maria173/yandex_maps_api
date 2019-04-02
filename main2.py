@@ -19,6 +19,7 @@ pygame.init()
 def ll(x, y):
     return "{0},{1}".format(x, y)
 
+
 # Параметры отображения карты:
 # координаты, масштаб, найденные объекты и т.д.
 COLOR_INACTIVE = pygame.Color('lightskyblue3')
@@ -86,6 +87,16 @@ class MapParams(object):
 
     # Обновление параметров карты по нажатой клавише.
     def update(self, event):
+
+        if event.key == pygame.K_UP:
+            self.lat += LON_STEP * 2 **(15 - self.zoom)
+        if event.key == pygame.K_DOWN:
+            self.lat -= LON_STEP * 2 **(15 - self.zoom)
+        if event.key == pygame.K_RIGHT:
+            self.lon += LAT_STEP * 2 **(15 - self.zoom)
+        if event.key == pygame.K_LEFT:
+            self.lon -= LAT_STEP * 2 **(15 - self.zoom)
+
         if event.key == pygame.K_PAGEUP and self.zoom < 19:
             self.zoom += 1
 
