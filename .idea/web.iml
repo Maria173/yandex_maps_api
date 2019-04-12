@@ -6,11 +6,19 @@
       <sourceFolder url="file://$MODULE_DIR$/web-server and api start/flask-server2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/api" isTestSource="false" />
     </content>
+<<<<<<< HEAD
     <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="pytest" />
+=======
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="projectConfiguration" value="py.test" />
+>>>>>>> 6812452c434c4de43882a81702fef71ea0ad8705
     <option name="PROJECT_TEST_RUNNER" value="py.test" />
   </component>
 </module>

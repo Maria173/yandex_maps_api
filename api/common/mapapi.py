@@ -4,9 +4,15 @@ import requests
 import sys
 import os
 
+<<<<<<< HEAD
 def show_map(ll1=None, ll2=None, map_type="map", add_params=None):
     if ll1 and ll2:
         map_request = "http://static-maps.yandex.ru/1.x/?ll={ll1},{ll2}&z=10&l={map_type}".format(**locals())
+=======
+def show_map(ll_spn=None, map_type="map", add_params=None):
+    if ll_spn:
+        map_request = "http://static-maps.yandex.ru/1.x/?{ll_spn}&l={map_type}".format(**locals())
+>>>>>>> 6812452c434c4de43882a81702fef71ea0ad8705
     else:
         map_request = "http://static-maps.yandex.ru/1.x/?l={map_type}".format(**locals())
 
@@ -31,7 +37,11 @@ def show_map(ll1=None, ll2=None, map_type="map", add_params=None):
 
     # Инициализируем pygame
     pygame.init() 
+<<<<<<< HEAD
     screen = pygame.display.set_mode((600, 450))
+=======
+    screen = pygame.display.set_mode((600,450))
+>>>>>>> 6812452c434c4de43882a81702fef71ea0ad8705
     # Рисуем картинку, загружаемую из только что созданного файла.
     screen.blit(pygame.image.load(map_file), (0, 0))
     # Переключаем экран и ждем закрытия окна.
