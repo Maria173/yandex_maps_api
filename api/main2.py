@@ -167,12 +167,12 @@ def main():
                     lon, lat = get_coordinates(input_box.text)
                     point = 'pt={},{}'.format(lon, lat)
                     show_map(lon, lat, add_params=point)
-                    mp2 = MapParams()
-                    mp2.lat = lat
-                    mp2.lon = lon
-                    map_file2 = load_map(mp2)
-                    screen.blit(pygame.image.load(map_file2), (0, 0))
-                    mp2.update(event)
+                    # mp2 = MapParams()
+                    # mp2.lat = lat
+                    # mp2.lon = lon
+                    # map_file2 = load_map(mp2)
+                    # screen.blit(pygame.image.load(map_file2), (0, 0))
+                    # mp2.update(event)
 
             mp.update(event)
 
