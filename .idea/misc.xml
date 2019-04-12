@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (map_api)" project-jdk-type="Python SDK" />
+=======
+<<<<<<< HEAD
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6.1 (C:\Program Files\Python36\python.exe)" project-jdk-type="Python SDK" />
+>>>>>>> 6812452c434c4de43882a81702fef71ea0ad8705
+>>>>>>> 57d85a7500097f1a48456f37d72cae37d7fb55f2
 </project>
